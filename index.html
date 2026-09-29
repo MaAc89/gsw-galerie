@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GSW Galerie</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      background: #171717;
+      font-family: Arial, sans-serif;
+    }
+
+    .gallery-wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .swiper {
+      width: 100%;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #222;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #222;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: white;
+    }
+
+    .swiper-pagination-bullet {
+      background: white;
+      opacity: 0.5;
+    }
+
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="gallery-wrap">
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/id/1015/1200/800" alt="Testbild 1">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/id/1016/1200/800" alt="Testbild 2">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/id/1025/1200/800" alt="Testbild 3">
+        </div>
+
+      </div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    new Swiper('.mySwiper', {
+      loop: true,
+
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
+    });
+  </script>
+
+</body>
+</html>
