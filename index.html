@@ -6,11 +6,19 @@
 
   <title>Fòttialbum – Glaibasler Sumpfwaggis</title>
 
+  <!-- Swiper -->
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
   >
 
+  <!-- GLightbox -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+  >
+
+  <!-- Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet"
@@ -31,17 +39,17 @@
 
     body {
       font-family: "Inter", Arial, sans-serif;
-      padding: 28px 20px 48px;
+      padding: 26px 20px 46px;
     }
 
     .gallery-page {
       width: 100%;
-      max-width: 1120px;
+      max-width: 1140px;
       margin: 0 auto;
     }
 
     .year-section {
-      margin-bottom: 64px;
+      margin-bottom: 60px;
     }
 
     .year-section:last-child {
@@ -49,7 +57,7 @@
     }
 
     .year-title {
-      margin: 0 0 18px;
+      margin: 0 0 15px;
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: 50px;
       line-height: 1;
@@ -58,54 +66,50 @@
     }
 
     .sujet-block {
-      margin: 0 0 30px;
-      max-width: 980px;
+      margin: 0 0 22px;
+      max-width: 930px;
     }
 
     .sujet-eyebrow {
-      margin-bottom: 5px;
+      margin-bottom: 4px;
       font-family: "Inter", Arial, sans-serif;
-      font-size: 13px;
+      font-size: 12px;
       line-height: 1.3;
       font-weight: 600;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: #bdbdbd;
+      color: #b8b8b8;
     }
 
     .sujet-title {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: 31px;
-      line-height: 1.12;
+      line-height: 1.1;
       font-weight: 600;
       color: #ffffff;
     }
 
     .sujet-text {
-      max-width: 900px;
+      max-width: 880px;
       font-family: "Inter", Arial, sans-serif;
       font-size: 16px;
-      line-height: 1.6;
+      line-height: 1.58;
       font-weight: 400;
-      color: #d7d7d7;
+      color: #d8d8d8;
     }
 
     .slider-shell {
       width: 100%;
-      border-radius: 16px;
+      border-radius: 14px;
       overflow: hidden;
       background: #232323;
     }
 
     .swiper {
       width: 100%;
-      height: clamp(420px, 58vw, 650px);
+      height: clamp(420px, 57vw, 650px);
       background: #232323;
-    }
-
-    .swiper-wrapper {
-      align-items: center;
     }
 
     .swiper-slide {
@@ -115,6 +119,15 @@
       align-items: center;
       justify-content: center;
       background: #232323;
+    }
+
+    .swiper-slide a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: zoom-in;
     }
 
     .swiper-slide img {
@@ -130,25 +143,25 @@
     .swiper-button-next,
     .swiper-button-prev {
       color: #ffffff;
-      width: 44px;
-      height: 44px;
+      width: 42px;
+      height: 42px;
     }
 
     .swiper-button-next::after,
     .swiper-button-prev::after {
-      font-size: 30px;
+      font-size: 29px;
       font-weight: 600;
     }
 
     .swiper-pagination {
-      bottom: 12px !important;
+      bottom: 11px !important;
     }
 
     .swiper-pagination-bullet {
       width: 8px;
       height: 8px;
       background: #ffffff;
-      opacity: 0.4;
+      opacity: 0.38;
     }
 
     .swiper-pagination-bullet-active {
@@ -156,10 +169,11 @@
     }
 
     .divider {
+      width: 92%;
       height: 1px;
       border: 0;
-      background: #3b3b3b;
-      margin: 0 0 46px;
+      background: #444444;
+      margin: 0 auto 42px;
     }
 
     @media (max-width: 900px) {
@@ -170,40 +184,39 @@
 
     @media (max-width: 700px) {
       body {
-        padding: 22px 14px 36px;
+        padding: 20px 14px 34px;
       }
 
       .year-section {
-        margin-bottom: 52px;
+        margin-bottom: 48px;
       }
 
       .year-title {
         font-size: 40px;
-        margin-bottom: 16px;
+        margin-bottom: 13px;
       }
 
       .sujet-block {
-        margin-bottom: 24px;
+        margin-bottom: 19px;
       }
 
       .sujet-eyebrow {
         font-size: 11px;
-        margin-bottom: 4px;
       }
 
       .sujet-title {
         font-size: 25px;
-        line-height: 1.15;
-        margin-bottom: 8px;
+        line-height: 1.14;
+        margin-bottom: 7px;
       }
 
       .sujet-text {
         font-size: 15px;
-        line-height: 1.55;
+        line-height: 1.52;
       }
 
       .slider-shell {
-        border-radius: 12px;
+        border-radius: 11px;
       }
 
       .swiper {
@@ -228,7 +241,8 @@
       }
 
       .divider {
-        margin-bottom: 36px;
+        width: 94%;
+        margin-bottom: 32px;
       }
     }
   </style>
@@ -236,249 +250,242 @@
 
 <body>
 
-  <main class="gallery-page">
+<main class="gallery-page">
 
-    <!-- =========================
-         FASNACHT 2026
-    ========================== -->
+  <!-- 2026 -->
+  <section class="year-section">
 
-    <section class="year-section">
+    <h2 class="year-title">Fasnacht 2026</h2>
 
-      <h2 class="year-title">Fasnacht 2026</h2>
+    <div class="sujet-block">
+      <div class="sujet-eyebrow">Sujet</div>
 
-      <div class="sujet-block">
-        <div class="sujet-eyebrow">Sujet 2026</div>
-
-        <div class="sujet-title">
-          Sali Du, hei bruuchts mi no?
-        </div>
-
-        <div class="sujet-text">
-          7 Waggis under dr Kontrolle vo dr kinschtligen Intelligänz,
-          iberwachen und sammlen im Namen vom Foortschrìtt allerlai
-          Daate und Informazioone vo dr Menschheit.
-        </div>
+      <div class="sujet-title">
+        Sali Du, hei bruuchts mi no?
       </div>
 
-      <div class="slider-shell">
-        <div class="swiper swiper-2026">
+      <div class="sujet-text">
+        7 Waggis under dr Kontrolle vo dr kinschtligen Intelligänz,
+        iberwachen und sammlen im Namen vom Foortschrìtt allerlai
+        Daate und Informazioone vo dr Menschheit.
+      </div>
+    </div>
 
-          <div class="swiper-wrapper">
+    <div class="slider-shell">
+      <div class="swiper swiper-2026">
+        <div class="swiper-wrapper">
 
-            <div class="swiper-slide"><img src="2026/2026-01.avif" alt="Fasnacht 2026 – Bild 1"></div>
-            <div class="swiper-slide"><img src="2026/2026-02.avif" alt="Fasnacht 2026 – Bild 2"></div>
-            <div class="swiper-slide"><img src="2026/2026-03.avif" alt="Fasnacht 2026 – Bild 3"></div>
-            <div class="swiper-slide"><img src="2026/2026-04.avif" alt="Fasnacht 2026 – Bild 4"></div>
-            <div class="swiper-slide"><img src="2026/2026-05.jpg" alt="Fasnacht 2026 – Bild 5"></div>
-            <div class="swiper-slide"><img src="2026/2026-06.avif" alt="Fasnacht 2026 – Bild 6"></div>
-            <div class="swiper-slide"><img src="2026/2026-07.avif" alt="Fasnacht 2026 – Bild 7"></div>
-            <div class="swiper-slide"><img src="2026/2026-08.jpg" alt="Fasnacht 2026 – Bild 8"></div>
-            <div class="swiper-slide"><img src="2026/2026-09.jpg" alt="Fasnacht 2026 – Bild 9"></div>
-            <div class="swiper-slide"><img src="2026/2026-10.jpg" alt="Fasnacht 2026 – Bild 10"></div>
-            <div class="swiper-slide"><img src="2026/2026-11.avif" alt="Fasnacht 2026 – Bild 11"></div>
-            <div class="swiper-slide"><img src="2026/2026-12.jpg" alt="Fasnacht 2026 – Bild 12"></div>
-            <div class="swiper-slide"><img src="2026/2026-13.jpg" alt="Fasnacht 2026 – Bild 13"></div>
-            <div class="swiper-slide"><img src="2026/2026-14.jpg" alt="Fasnacht 2026 – Bild 14"></div>
-            <div class="swiper-slide"><img src="2026/2026-15.jpg" alt="Fasnacht 2026 – Bild 15"></div>
-            <div class="swiper-slide"><img src="2026/2026-16.jpg" alt="Fasnacht 2026 – Bild 16"></div>
-            <div class="swiper-slide"><img src="2026/2026-17.jpg" alt="Fasnacht 2026 – Bild 17"></div>
-            <div class="swiper-slide"><img src="2026/2026-18.jpg" alt="Fasnacht 2026 – Bild 18"></div>
-            <div class="swiper-slide"><img src="2026/2026-19.jpg" alt="Fasnacht 2026 – Bild 19"></div>
-            <div class="swiper-slide"><img src="2026/2026-20.jpg" alt="Fasnacht 2026 – Bild 20"></div>
-            <div class="swiper-slide"><img src="2026/2026-21.jpg" alt="Fasnacht 2026 – Bild 21"></div>
-            <div class="swiper-slide"><img src="2026/2026-22.jpg" alt="Fasnacht 2026 – Bild 22"></div>
-            <div class="swiper-slide"><img src="2026/2026-23.jpg" alt="Fasnacht 2026 – Bild 23"></div>
-            <div class="swiper-slide"><img src="2026/2026-24.jpg" alt="Fasnacht 2026 – Bild 24"></div>
-            <div class="swiper-slide"><img src="2026/2026-25.jpg" alt="Fasnacht 2026 – Bild 25"></div>
-            <div class="swiper-slide"><img src="2026/2026-26.jpg" alt="Fasnacht 2026 – Bild 26"></div>
-            <div class="swiper-slide"><img src="2026/2026-27.jpg" alt="Fasnacht 2026 – Bild 27"></div>
-            <div class="swiper-slide"><img src="2026/2026-28.jpg" alt="Fasnacht 2026 – Bild 28"></div>
-            <div class="swiper-slide"><img src="2026/2026-29.jpg" alt="Fasnacht 2026 – Bild 29"></div>
-            <div class="swiper-slide"><img src="2026/2026-30.jpg" alt="Fasnacht 2026 – Bild 30"></div>
-            <div class="swiper-slide"><img src="2026/2026-31.jpg" alt="Fasnacht 2026 – Bild 31"></div>
-            <div class="swiper-slide"><img src="2026/2026-32.jpg" alt="Fasnacht 2026 – Bild 32"></div>
-            <div class="swiper-slide"><img src="2026/2026-33.jpg" alt="Fasnacht 2026 – Bild 33"></div>
-            <div class="swiper-slide"><img src="2026/2026-34.jpg" alt="Fasnacht 2026 – Bild 34"></div>
-            <div class="swiper-slide"><img src="2026/2026-35.jpg" alt="Fasnacht 2026 – Bild 35"></div>
-            <div class="swiper-slide"><img src="2026/2026-36.jpg" alt="Fasnacht 2026 – Bild 36"></div>
-            <div class="swiper-slide"><img src="2026/2026-37.jpg" alt="Fasnacht 2026 – Bild 37"></div>
+          <div class="swiper-slide"><a href="2026/2026-01.avif" class="glightbox" data-gallery="gal2026"><img src="2026/2026-01.avif" alt="Fasnacht 2026 – Bild 1"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-02.avif" class="glightbox" data-gallery="gal2026"><img src="2026/2026-02.avif" alt="Fasnacht 2026 – Bild 2"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-03.avif" class="glightbox" data-gallery="gal2026"><img src="2026/2026-03.avif" alt="Fasnacht 2026 – Bild 3"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-04.avif" class="glightbox" data-gallery="gal2026"><img src="2026/2026-04.avif" alt="Fasnacht 2026 – Bild 4"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-05.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-05.jpg" alt="Fasnacht 2026 – Bild 5"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-06.avif" class="glightbox" data-gallery="gal2026"><img src="2026/2026-06.avif" alt="Fasnacht 2026 – Bild 6"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-07.avif" class="glightbox" data-gallery="gal2026"><img src="2026/2026-07.avif" alt="Fasnacht 2026 – Bild 7"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-08.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-08.jpg" alt="Fasnacht 2026 – Bild 8"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-09.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-09.jpg" alt="Fasnacht 2026 – Bild 9"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-10.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-10.jpg" alt="Fasnacht 2026 – Bild 10"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-11.avif" class="glightbox" data-gallery="gal2026"><img src="2026/2026-11.avif" alt="Fasnacht 2026 – Bild 11"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-12.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-12.jpg" alt="Fasnacht 2026 – Bild 12"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-13.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-13.jpg" alt="Fasnacht 2026 – Bild 13"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-14.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-14.jpg" alt="Fasnacht 2026 – Bild 14"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-15.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-15.jpg" alt="Fasnacht 2026 – Bild 15"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-16.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-16.jpg" alt="Fasnacht 2026 – Bild 16"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-17.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-17.jpg" alt="Fasnacht 2026 – Bild 17"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-18.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-18.jpg" alt="Fasnacht 2026 – Bild 18"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-19.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-19.jpg" alt="Fasnacht 2026 – Bild 19"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-20.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-20.jpg" alt="Fasnacht 2026 – Bild 20"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-21.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-21.jpg" alt="Fasnacht 2026 – Bild 21"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-22.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-22.jpg" alt="Fasnacht 2026 – Bild 22"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-23.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-23.jpg" alt="Fasnacht 2026 – Bild 23"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-24.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-24.jpg" alt="Fasnacht 2026 – Bild 24"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-25.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-25.jpg" alt="Fasnacht 2026 – Bild 25"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-26.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-26.jpg" alt="Fasnacht 2026 – Bild 26"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-27.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-27.jpg" alt="Fasnacht 2026 – Bild 27"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-28.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-28.jpg" alt="Fasnacht 2026 – Bild 28"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-29.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-29.jpg" alt="Fasnacht 2026 – Bild 29"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-30.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-30.jpg" alt="Fasnacht 2026 – Bild 30"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-31.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-31.jpg" alt="Fasnacht 2026 – Bild 31"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-32.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-32.jpg" alt="Fasnacht 2026 – Bild 32"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-33.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-33.jpg" alt="Fasnacht 2026 – Bild 33"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-34.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-34.jpg" alt="Fasnacht 2026 – Bild 34"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-35.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-35.jpg" alt="Fasnacht 2026 – Bild 35"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-36.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-36.jpg" alt="Fasnacht 2026 – Bild 36"></a></div>
+          <div class="swiper-slide"><a href="2026/2026-37.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/2026-37.jpg" alt="Fasnacht 2026 – Bild 37"></a></div>
 
-            <div class="swiper-slide"><img src="2026/Fabian.jpg" alt="Fabian"></div>
-            <div class="swiper-slide"><img src="2026/Manuel.jpg" alt="Manuel"></div>
-            <div class="swiper-slide"><img src="2026/Marco.jpg" alt="Marco"></div>
-            <div class="swiper-slide"><img src="2026/Mario.jpg" alt="Mario"></div>
-            <div class="swiper-slide"><img src="2026/Markus.jpg" alt="Markus"></div>
-            <div class="swiper-slide"><img src="2026/Michel.jpg" alt="Michel"></div>
-            <div class="swiper-slide"><img src="2026/Roger.jpg" alt="Roger"></div>
-
-          </div>
-
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-slide"><a href="2026/Fabian.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/Fabian.jpg" alt="Fabian"></a></div>
+          <div class="swiper-slide"><a href="2026/Manuel.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/Manuel.jpg" alt="Manuel"></a></div>
+          <div class="swiper-slide"><a href="2026/Marco.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/Marco.jpg" alt="Marco"></a></div>
+          <div class="swiper-slide"><a href="2026/Mario.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/Mario.jpg" alt="Mario"></a></div>
+          <div class="swiper-slide"><a href="2026/Markus.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/Markus.jpg" alt="Markus"></a></div>
+          <div class="swiper-slide"><a href="2026/Michel.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/Michel.jpg" alt="Michel"></a></div>
+          <div class="swiper-slide"><a href="2026/Roger.jpg" class="glightbox" data-gallery="gal2026"><img src="2026/Roger.jpg" alt="Roger"></a></div>
 
         </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <hr class="divider">
+
+  <!-- 2025 -->
+  <section class="year-section">
+
+    <h2 class="year-title">Fasnacht 2025</h2>
+
+    <div class="sujet-block">
+      <div class="sujet-eyebrow">Sujet</div>
+
+      <div class="sujet-title">
+        Lueged guet umme, dr Kääfer goot umme
       </div>
 
-    </section>
+      <div class="sujet-text">
+        4 muetigi Forscher jetzt do vor Ort, undersueche die Kääfer vo Färnoscht bis uff Basel ans Rhybord.<br>
+        Eb mit 6 Bai oder ooni Ruggroot, mir finde sie und stelle si zer Schau.<br>
+        Die Blooggaischter sinn fir uns Forscher z wenig schlau.<br>
+        Dr Japan-Kääfer, wo im Joggeli dr Raase frisst, das isch eso, isch nit dr einzig Schäädling do.
+      </div>
+    </div>
 
-    <hr class="divider">
+    <div class="slider-shell">
+      <div class="swiper swiper-2025">
+        <div class="swiper-wrapper">
 
+          <div class="swiper-slide"><a href="2025/2025-01.jpg" class="glightbox" data-gallery="gal2025"><img src="2025/2025-01.jpg" alt="Fasnacht 2025 – Bild 1"></a></div>
+          <div class="swiper-slide"><a href="2025/2025-02.jpg" class="glightbox" data-gallery="gal2025"><img src="2025/2025-02.jpg" alt="Fasnacht 2025 – Bild 2"></a></div>
+          <div class="swiper-slide"><a href="2025/2025-03.jpg" class="glightbox" data-gallery="gal2025"><img src="2025/2025-03.jpg" alt="Fasnacht 2025 – Bild 3"></a></div>
+          <div class="swiper-slide"><a href="2025/2025-04.jpg" class="glightbox" data-gallery="gal2025"><img src="2025/2025-04.jpg" alt="Fasnacht 2025 – Bild 4"></a></div>
+          <div class="swiper-slide"><a href="2025/2025-05.jpg" class="glightbox" data-gallery="gal2025"><img src="2025/2025-05.jpg" alt="Fasnacht 2025 – Bild 5"></a></div>
+          <div class="swiper-slide"><a href="2025/2025-06.jpg" class="glightbox" data-gallery="gal2025"><img src="2025/2025-06.jpg" alt="Fasnacht 2025 – Bild 6"></a></div>
+          <div class="swiper-slide"><a href="2025/2025-07.jpg" class="glightbox" data-gallery="gal2025"><img src="2025/2025-07.jpg" alt="Fasnacht 2025 – Bild 7"></a></div>
+          <div class="swiper-slide"><a href="2025/2025-08.jpg" class="glightbox" data-gallery="gal2025"><img src="2025/2025-08.jpg" alt="Fasnacht 2025 – Bild 8"></a></div>
+          <div class="swiper-slide"><a href="2025/2025-09.jpg" class="glightbox" data-gallery="gal2025"><img src="2025/2025-09.jpg" alt="Fasnacht 2025 – Bild 9"></a></div>
+          <div class="swiper-slide"><a href="2025/2025-10.jpg" class="glightbox" data-gallery="gal2025"><img src="2025/2025-10.jpg" alt="Fasnacht 2025 – Bild 10"></a></div>
+          <div class="swiper-slide"><a href="2025/2025-11.jpg" class="glightbox" data-gallery="gal2025"><img src="2025/2025-11.jpg" alt="Fasnacht 2025 – Bild 11"></a></div>
+          <div class="swiper-slide"><a href="2025/2025-12.jpg" class="glightbox" data-gallery="gal2025"><img src="2025/2025-12.jpg" alt="Fasnacht 2025 – Bild 12"></a></div>
+          <div class="swiper-slide"><a href="2025/2025-13.jpg" class="glightbox" data-gallery="gal2025"><img src="2025/2025-13.jpg" alt="Fasnacht 2025 – Bild 13"></a></div>
+          <div class="swiper-slide"><a href="2025/2025-14.jpg" class="glightbox" data-gallery="gal2025"><img src="2025/2025-14.jpg" alt="Fasnacht 2025 – Bild 14"></a></div>
+          <div class="swiper-slide"><a href="2025/2025-15.jpg" class="glightbox" data-gallery="gal2025"><img src="2025/2025-15.jpg" alt="Fasnacht 2025 – Bild 15"></a></div>
 
-    <!-- =========================
-         FASNACHT 2025
-    ========================== -->
-
-    <section class="year-section">
-
-      <h2 class="year-title">Fasnacht 2025</h2>
-
-      <div class="sujet-block">
-        <div class="sujet-eyebrow">Sujet 2025</div>
-
-        <div class="sujet-title">
-          Lueged guet umme, dr Kääfer goot umme
         </div>
 
-        <div class="sujet-text">
-          4 muetigi Forscher jetzt do vor Ort, undersueche die Kääfer vo Färnoscht bis uff Basel ans Rhybord.<br>
-          Eb mit 6 Bai oder ooni Ruggroot, mir finde sie und stelle si zer Schau.<br>
-          Die Blooggaischter sinn fir uns Forscher z wenig schlau.<br>
-          Dr Japan-Kääfer, wo im Joggeli dr Raase frisst, das isch eso, isch nit dr einzig Schäädling do.
-        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <hr class="divider">
+
+  <!-- 2024 -->
+  <section class="year-section">
+
+    <h2 class="year-title">Fasnacht 2024</h2>
+
+    <div class="sujet-block">
+      <div class="sujet-eyebrow">Sujet</div>
+
+      <div class="sujet-title">
+        Kulturstadt Basel goot baade
       </div>
 
-      <div class="slider-shell">
-        <div class="swiper swiper-2025">
-
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide"><img src="2025/2025-01.jpg" alt="Fasnacht 2025 – Bild 1"></div>
-            <div class="swiper-slide"><img src="2025/2025-02.jpg" alt="Fasnacht 2025 – Bild 2"></div>
-            <div class="swiper-slide"><img src="2025/2025-03.jpg" alt="Fasnacht 2025 – Bild 3"></div>
-            <div class="swiper-slide"><img src="2025/2025-04.jpg" alt="Fasnacht 2025 – Bild 4"></div>
-            <div class="swiper-slide"><img src="2025/2025-05.jpg" alt="Fasnacht 2025 – Bild 5"></div>
-            <div class="swiper-slide"><img src="2025/2025-06.jpg" alt="Fasnacht 2025 – Bild 6"></div>
-            <div class="swiper-slide"><img src="2025/2025-07.jpg" alt="Fasnacht 2025 – Bild 7"></div>
-            <div class="swiper-slide"><img src="2025/2025-08.jpg" alt="Fasnacht 2025 – Bild 8"></div>
-            <div class="swiper-slide"><img src="2025/2025-09.jpg" alt="Fasnacht 2025 – Bild 9"></div>
-            <div class="swiper-slide"><img src="2025/2025-10.jpg" alt="Fasnacht 2025 – Bild 10"></div>
-            <div class="swiper-slide"><img src="2025/2025-11.jpg" alt="Fasnacht 2025 – Bild 11"></div>
-            <div class="swiper-slide"><img src="2025/2025-12.jpg" alt="Fasnacht 2025 – Bild 12"></div>
-            <div class="swiper-slide"><img src="2025/2025-13.jpg" alt="Fasnacht 2025 – Bild 13"></div>
-            <div class="swiper-slide"><img src="2025/2025-14.jpg" alt="Fasnacht 2025 – Bild 14"></div>
-            <div class="swiper-slide"><img src="2025/2025-15.jpg" alt="Fasnacht 2025 – Bild 15"></div>
-
-          </div>
-
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-pagination"></div>
-
-        </div>
+      <div class="sujet-text">
+        Do sait dr Huuswaart vom Musical-Theater ganz konfuus,
+        bald schaff yych als Baadmaischter in däm kulturelle Huus.
+        Jo, e Hallebaad im Theater, yych kas nit begryffe,
+        do druff kann yych doch aifach numme pyffe.
       </div>
+    </div>
 
-    </section>
+    <div class="slider-shell">
+      <div class="swiper swiper-2024">
+        <div class="swiper-wrapper">
 
-    <hr class="divider">
+          <div class="swiper-slide"><a href="2024/2024-01.jpg" class="glightbox" data-gallery="gal2024"><img src="2024/2024-01.jpg" alt="Fasnacht 2024 – Bild 1"></a></div>
+          <div class="swiper-slide"><a href="2024/2024-02.jpg" class="glightbox" data-gallery="gal2024"><img src="2024/2024-02.jpg" alt="Fasnacht 2024 – Bild 2"></a></div>
+          <div class="swiper-slide"><a href="2024/2024-03.jpg" class="glightbox" data-gallery="gal2024"><img src="2024/2024-03.jpg" alt="Fasnacht 2024 – Bild 3"></a></div>
+          <div class="swiper-slide"><a href="2024/2024-04.jpg" class="glightbox" data-gallery="gal2024"><img src="2024/2024-04.jpg" alt="Fasnacht 2024 – Bild 4"></a></div>
+          <div class="swiper-slide"><a href="2024/2024-05.jpg" class="glightbox" data-gallery="gal2024"><img src="2024/2024-05.jpg" alt="Fasnacht 2024 – Bild 5"></a></div>
+          <div class="swiper-slide"><a href="2024/2024-06.jpg" class="glightbox" data-gallery="gal2024"><img src="2024/2024-06.jpg" alt="Fasnacht 2024 – Bild 6"></a></div>
+          <div class="swiper-slide"><a href="2024/2024-07.jpg" class="glightbox" data-gallery="gal2024"><img src="2024/2024-07.jpg" alt="Fasnacht 2024 – Bild 7"></a></div>
+          <div class="swiper-slide"><a href="2024/2024-08.jpg" class="glightbox" data-gallery="gal2024"><img src="2024/2024-08.jpg" alt="Fasnacht 2024 – Bild 8"></a></div>
+          <div class="swiper-slide"><a href="2024/2024-09.jpg" class="glightbox" data-gallery="gal2024"><img src="2024/2024-09.jpg" alt="Fasnacht 2024 – Bild 9"></a></div>
+          <div class="swiper-slide"><a href="2024/2024-10.jpg" class="glightbox" data-gallery="gal2024"><img src="2024/2024-10.jpg" alt="Fasnacht 2024 – Bild 10"></a></div>
+          <div class="swiper-slide"><a href="2024/2024-11.jpg" class="glightbox" data-gallery="gal2024"><img src="2024/2024-11.jpg" alt="Fasnacht 2024 – Bild 11"></a></div>
+          <div class="swiper-slide"><a href="2024/2024-12.jpg" class="glightbox" data-gallery="gal2024"><img src="2024/2024-12.jpg" alt="Fasnacht 2024 – Bild 12"></a></div>
+          <div class="swiper-slide"><a href="2024/2024-13.jpg" class="glightbox" data-gallery="gal2024"><img src="2024/2024-13.jpg" alt="Fasnacht 2024 – Bild 13"></a></div>
+          <div class="swiper-slide"><a href="2024/2024-14.jpg" class="glightbox" data-gallery="gal2024"><img src="2024/2024-14.jpg" alt="Fasnacht 2024 – Bild 14"></a></div>
 
-
-    <!-- =========================
-         FASNACHT 2024
-    ========================== -->
-
-    <section class="year-section">
-
-      <h2 class="year-title">Fasnacht 2024</h2>
-
-      <div class="sujet-block">
-        <div class="sujet-eyebrow">Sujet 2024</div>
-
-        <div class="sujet-title">
-          Kulturstadt Basel goot baade
         </div>
 
-        <div class="sujet-text">
-          Do sait dr Huuswaart vom Musical-Theater ganz konfuus,
-          bald schaff yych als Baadmaischter in däm kulturelle Huus.
-          Jo, e Hallebaad im Theater, yych kas nit begryffe,
-          do druff kann yych doch aifach numme pyffe.
-        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
       </div>
+    </div>
 
-      <div class="slider-shell">
-        <div class="swiper swiper-2024">
+  </section>
 
-          <div class="swiper-wrapper">
+</main>
 
-            <div class="swiper-slide"><img src="2024/2024-01.jpg" alt="Fasnacht 2024 – Bild 1"></div>
-            <div class="swiper-slide"><img src="2024/2024-02.jpg" alt="Fasnacht 2024 – Bild 2"></div>
-            <div class="swiper-slide"><img src="2024/2024-03.jpg" alt="Fasnacht 2024 – Bild 3"></div>
-            <div class="swiper-slide"><img src="2024/2024-04.jpg" alt="Fasnacht 2024 – Bild 4"></div>
-            <div class="swiper-slide"><img src="2024/2024-05.jpg" alt="Fasnacht 2024 – Bild 5"></div>
-            <div class="swiper-slide"><img src="2024/2024-06.jpg" alt="Fasnacht 2024 – Bild 6"></div>
-            <div class="swiper-slide"><img src="2024/2024-07.jpg" alt="Fasnacht 2024 – Bild 7"></div>
-            <div class="swiper-slide"><img src="2024/2024-08.jpg" alt="Fasnacht 2024 – Bild 8"></div>
-            <div class="swiper-slide"><img src="2024/2024-09.jpg" alt="Fasnacht 2024 – Bild 9"></div>
-            <div class="swiper-slide"><img src="2024/2024-10.jpg" alt="Fasnacht 2024 – Bild 10"></div>
-            <div class="swiper-slide"><img src="2024/2024-11.jpg" alt="Fasnacht 2024 – Bild 11"></div>
-            <div class="swiper-slide"><img src="2024/2024-12.jpg" alt="Fasnacht 2024 – Bild 12"></div>
-            <div class="swiper-slide"><img src="2024/2024-13.jpg" alt="Fasnacht 2024 – Bild 13"></div>
-            <div class="swiper-slide"><img src="2024/2024-14.jpg" alt="Fasnacht 2024 – Bild 14"></div>
+<!-- Swiper -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-          </div>
+<!-- GLightbox -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-pagination"></div>
+<script>
+  document.querySelectorAll('.swiper').forEach(function(slider) {
 
-        </div>
-      </div>
+    new Swiper(slider, {
+      loop: true,
+      speed: 650,
+      grabCursor: true,
+      slidesPerView: 1,
 
-    </section>
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      },
 
-  </main>
+      pagination: {
+        el: slider.querySelector('.swiper-pagination'),
+        clickable: true,
+        dynamicBullets: true
+      },
 
+      navigation: {
+        nextEl: slider.querySelector('.swiper-button-next'),
+        prevEl: slider.querySelector('.swiper-button-prev')
+      },
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      keyboard: {
+        enabled: true
+      },
 
-  <script>
-    document.querySelectorAll('.swiper').forEach(function(slider) {
-
-      new Swiper(slider, {
-        loop: true,
-        speed: 650,
-        grabCursor: true,
-        slidesPerView: 1,
-        spaceBetween: 0,
-
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true
-        },
-
-        pagination: {
-          el: slider.querySelector('.swiper-pagination'),
-          clickable: true,
-          dynamicBullets: true
-        },
-
-        navigation: {
-          nextEl: slider.querySelector('.swiper-button-next'),
-          prevEl: slider.querySelector('.swiper-button-prev')
-        },
-
-        keyboard: {
-          enabled: true
-        },
-
-        touchRatio: 1,
-        simulateTouch: true
-      });
-
+      touchRatio: 1,
+      simulateTouch: true
     });
-  </script>
+
+  });
+
+  GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    loop: true,
+    zoomable: true,
+    draggable: true
+  });
+</script>
 
 </body>
 </html>
